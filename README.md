@@ -9,5 +9,7 @@ https://github.com/fchollet/deep-learning-models/archive/v0.4.zip
 
 Instructions:
 1) Run extractfeats.py.  It will create a features folder and put collections of features there.
+
 2) Run deepnetplots.py to generate Nearest Neighbor plots for deep networks.  "hidden" in the output image means the model has not top, "cls" means model has top.
+
 3) Run sortbyfeatureplots.py.  This will create a plot of the top ranked images for each non-deep network feature.

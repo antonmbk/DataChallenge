@@ -5,6 +5,9 @@ from os import path
 from glob import glob
 import sys
 
+if not path.isdir('deep-learning-models-master'):
+    warnings.warn("Cannot find deep-learning-models-master in this directory")
+    raise SystemExit
 sys.path.append(path.join('deep-learning-models-master'))
 from imagenet_utils import decode_predictions, preprocess_input
 from resnet50 import ResNet50
@@ -16,18 +19,14 @@ workdir = 'features'
 if not os.path.exists(workdir):
     os.makedirs(workdir)
 
-'''featuredict = [('ResNet50_hidden', getpredfun(ResNet50, include_top=False)),
+featuredict = [('ResNet50_hidden', getpredfun(ResNet50, include_top=False)),
                ('ResNet50_cls', getpredfun(ResNet50, include_top=True)),
                ('VGG19_hidden', getpredfun(VGG19, include_top=False)),
                ('VGG19_cls', getpredfun(VGG19, include_top=True)),
                ('border', border),
                ('border_pix5', lambda x:border(x, pix=5)),
                ('border_pix10', lambda x:border(x, pix=10)),
-               ('b&w', blackandwhite)]'''
-featuredict = [('border', border),
-               ('border_pix5', lambda x:border(x, pix=5)),
-               ('border_pix10', lambda x:border(x, pix=10)),
-               ('b&w', blackandwhite)]               
+               ('b&w', blackandwhite)]
 
 featuredict = dict(featuredict)
 

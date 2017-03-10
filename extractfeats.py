@@ -26,8 +26,9 @@ featuredict = [('ResNet50_hidden', getpredfun(ResNet50, include_top=False)),
                ('border', border),
                ('border_pix5', lambda x:border(x, pix=5)),
                ('border_pix10', lambda x:border(x, pix=10)),
-               ('b&w', blackandwhite)]
-
+               ('b&w', blackandwhite),
+               ('b&w2', blackandwhite2)]
+               
 featuredict = dict(featuredict)
 
 batch_size = 1000

@@ -52,3 +52,11 @@ def border(x, pix=1):
 def blackandwhite(x):
     ''' Calculates if color levels are equal or varied to detect b&w images'''
     return np.mean(np.var(x, axis=1), axis=(-2, -1))[:, None]
+
+
+def blackandwhite2(x):
+    ''' Calculates if color levels are equal or varied to detect b&w images'''
+    f = 0
+    for ij in [(0, 1), (0, 2), (1, 2)]:
+        f += np.mean(np.abs(x[:, [ij[0]]] - x[:, [ij[1]]]), axis=(-2, -1))
+    return f

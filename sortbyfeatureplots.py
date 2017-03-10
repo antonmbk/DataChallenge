@@ -10,7 +10,7 @@ from challenge_utils import *
 workdir = 'features'
 # n is the number of images along each image dimension
 n = 10
-featurelist = ['border', 'border_pix5', 'border_pix10', 'b&w']
+featurelist = ['border', 'border_pix5', 'border_pix10', 'b&w', 'b&w2']
 
 # Load the filenames
 files = np.load(path.join(workdir, 'files.npy'))

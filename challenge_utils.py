@@ -2,6 +2,10 @@ import numpy as np
 from keras.preprocessing import image
 import sys
 from os import path
+import warnings
+if not path.isdir('deep-learning-models-master'):
+    warnings.warn("Cannot find deep-learning-models-master in this directory")
+    raise SystemExit
 sys.path.append(path.join('deep-learning-models-master'))
 from imagenet_utils import preprocess_input
 

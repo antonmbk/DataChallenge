@@ -5,10 +5,10 @@ from os import path
 from glob import glob
 import sys
 
-if not path.isdir('deep-learning-models-master'):
-    warnings.warn("Cannot find deep-learning-models-master in this directory")
+if not path.isdir('deep-learning-models-0.4'):
+    warnings.warn("Cannot find deep-learning-models-0.4 in this directory")
     raise SystemExit
-sys.path.append(path.join('deep-learning-models-master'))
+sys.path.append(path.join('deep-learning-models-0.4'))
 from imagenet_utils import decode_predictions, preprocess_input
 from resnet50 import ResNet50
 from vgg19 import VGG19

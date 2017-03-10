@@ -18,8 +18,7 @@ files = np.load(path.join(workdir, 'files.npy'))
 # The features we have calculated are stored as features*.npy files
 features_files = glob(path.join(workdir, 'features_*.npy'))
 
-# Nearest neighbor plots
-# Go through each feature collection and find template nearest neighbors
+# Plots of images sorted by feature
 for featfile in features_files:
     feature_name = path.splitext(path.split(featfile)[1])[0]
     if feature_name.split('_')[1] in featurelist:

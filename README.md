@@ -7,9 +7,11 @@ Should work out of box, however deep-learning-models version .4 must be in the d
 Get it here:
 https://github.com/fchollet/deep-learning-models/archive/v0.4.zip
 
+Also, images are expected to reside at ..\\data\\images.
+
 Instructions:
 
-1) Run extractfeats.py.  It will create a features folder and put collections of features there.
+1) Run extractfeats.py.  It will create a features folder and put collections of features there.  This will take a few hours w/ GPU.  Without GPU probably day or two.
 
 2) Run deepnetplots.py to generate Nearest Neighbor plots for deep networks.  "hidden" in the output image means the model has not top, "cls" means model has top.
 
